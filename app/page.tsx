@@ -111,6 +111,19 @@ const privacyItems = [
   },
 ];
 
+const mobileFeatureTiles = [
+  features[0],
+  features[1],
+  features[2],
+  features[3],
+  features[4],
+  {
+    title: "Безопасность",
+    text: "",
+    icon: privacyItems[0].icon,
+  },
+];
+
 const stats = [
   {
     value: "50 000+",
@@ -179,10 +192,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.07] bg-black">
-        <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-10">
+        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 sm:h-[76px] sm:px-10">
           <a
             href="#top"
-            className="text-[28px] font-black uppercase tracking-[-0.08em] text-white drop-shadow-[0_0_18px_rgba(255,255,255,0.24)]"
+            className="text-[22px] font-black uppercase tracking-[-0.08em] text-white drop-shadow-[0_0_18px_rgba(255,255,255,0.24)] sm:text-[28px]"
           >
             DARKKICK
           </a>
@@ -210,50 +223,50 @@ export default function Home() {
 
       <section
         id="top"
-        className="relative mx-auto min-h-[764px] max-w-[1440px] overflow-hidden px-10 pt-[156px]"
+        className="relative mx-auto min-h-screen max-w-[1440px] overflow-hidden px-5 pb-8 pt-[112px] sm:min-h-[764px] sm:px-10 sm:pt-[156px]"
       >
-        <div className="absolute inset-x-0 top-[76px] h-[690px] bg-[url('/dark-angel-hero.png')] bg-[length:auto_100%] bg-[position:right_top] bg-no-repeat" />
-        <div className="absolute inset-x-0 top-[76px] h-[690px] bg-[linear-gradient(90deg,#000_0%,#000_32%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.12)_65%,#000_100%)]" />
+        <div className="absolute inset-0 bg-[url('/dark-angel-hero.png')] bg-cover bg-[position:58%_top] bg-no-repeat sm:inset-x-0 sm:bottom-auto sm:top-[76px] sm:h-[690px] sm:bg-[length:auto_100%] sm:bg-[position:right_top]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.3)_0%,rgba(0,0,0,0.54)_34%,#000_100%),linear-gradient(90deg,#000_0%,rgba(0,0,0,0.76)_48%,rgba(0,0,0,0.2)_100%)] sm:inset-x-0 sm:bottom-auto sm:top-[76px] sm:h-[690px] sm:bg-[linear-gradient(90deg,#000_0%,#000_32%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.12)_65%,#000_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
 
-        <div className="relative z-10 max-w-[540px]">
-          <div className="inline-flex h-8 items-center gap-3 rounded-full bg-[#101014] px-4 text-[15px] text-zinc-200 ring-1 ring-white/[0.06]">
+        <div className="relative z-10 flex min-h-[calc(100vh-140px)] max-w-[540px] flex-col justify-end sm:block sm:min-h-0">
+          <div className="inline-flex h-8 w-fit items-center gap-2 rounded-full bg-[#101014]/90 px-3 text-[12px] text-zinc-200 ring-1 ring-white/[0.06] sm:gap-3 sm:px-4 sm:text-[15px]">
             <span className="h-2.5 w-2.5 rounded-full bg-purple-500 shadow-[0_0_16px_rgba(168,85,247,1)]" />
             Приватный мессенджер нового поколения
           </div>
 
-          <h1 className="mt-8 text-[104px] font-black uppercase leading-[0.9] tracking-[-0.075em] text-zinc-100 drop-shadow-[0_8px_28px_rgba(255,255,255,0.16)]">
+          <h1 className="mt-6 text-[62px] font-black uppercase leading-[0.9] tracking-[-0.075em] text-zinc-100 drop-shadow-[0_8px_28px_rgba(255,255,255,0.16)] sm:mt-8 sm:text-[104px]">
             DARKKICK
           </h1>
 
-          <h2 className="mt-8 text-[34px] font-bold leading-tight tracking-[-0.04em] text-white">
+          <h2 className="mt-5 text-[25px] font-bold leading-tight tracking-[-0.04em] text-white sm:mt-8 sm:text-[34px]">
             Без границ. <span className="text-purple-500">Без слежки.</span>
           </h2>
 
-          <p className="mt-8 max-w-[470px] text-[17px] leading-8 text-zinc-400">
+          <p className="mt-5 max-w-[470px] text-[15px] leading-7 text-zinc-300 sm:mt-8 sm:text-[17px] sm:leading-8 sm:text-zinc-400">
             DARKKICK — это приватный мессенджер с упором на безопасность,
             свободу и стиль. Никаких телефонных номеров. Никаких компромиссов.
           </p>
 
-          <div className="mt-10 flex gap-5">
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:mt-10 sm:flex sm:gap-5">
             <a
               href={apkDownloadUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-[58px] items-center gap-3 rounded-lg bg-purple-600 px-8 text-[16px] font-bold text-white shadow-[0_0_36px_rgba(124,58,237,0.62)] hover:bg-purple-500"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-purple-600 px-3 text-[13px] font-bold text-white shadow-[0_0_36px_rgba(124,58,237,0.62)] hover:bg-purple-500 sm:h-[58px] sm:gap-3 sm:px-8 sm:text-[16px]"
             >
               <DownloadIcon className="h-5 w-5" />
               Скачать DARKKICK
             </a>
             <a
               href={githubUrl}
-              className="inline-flex h-[58px] items-center justify-center rounded-lg border border-white/20 bg-[#09090d] px-8 text-[16px] font-bold text-white hover:border-purple-500/70"
+              className="inline-flex h-12 items-center justify-center rounded-lg border border-white/20 bg-[#09090d]/90 px-3 text-[13px] font-bold text-white hover:border-purple-500/70 sm:h-[58px] sm:px-8 sm:text-[16px]"
             >
               GitHub
             </a>
           </div>
 
-          <p className="mt-7 text-[14px] text-zinc-500">
+          <p className="mt-5 text-[13px] text-zinc-500 sm:mt-7 sm:text-[14px]">
             Открытый код. Проверяемая безопасность.
           </p>
         </div>
@@ -261,7 +274,26 @@ export default function Home() {
 
       <section
         id="features"
-        className="mx-auto grid max-w-[1440px] grid-cols-1 gap-5 px-10 pb-6 md:grid-cols-2 xl:grid-cols-5"
+        className="mx-auto grid max-w-[1440px] grid-cols-2 gap-3 px-5 pb-5 sm:hidden"
+      >
+        {mobileFeatureTiles.map((feature) => (
+          <article
+            key={feature.title}
+            className="min-h-[112px] rounded-2xl border border-purple-500/25 bg-[#06060a]/95 p-4 shadow-[0_0_28px_rgba(88,28,135,0.16)]"
+          >
+            <div className="mb-3 text-purple-400 [&_svg]:h-7 [&_svg]:w-7 [&_path]:fill-none [&_path]:stroke-current [&_path]:stroke-2">
+              {feature.icon}
+            </div>
+            <h3 className="text-[14px] font-black uppercase tracking-[-0.03em]">
+              {feature.title}
+            </h3>
+          </article>
+        ))}
+      </section>
+
+      <section
+        id="features-desktop"
+        className="mx-auto hidden max-w-[1440px] gap-5 px-10 pb-6 sm:grid md:grid-cols-2 xl:grid-cols-5"
       >
         {features.map((feature) => (
           <article
@@ -287,39 +319,39 @@ export default function Home() {
         ))}
       </section>
 
-      <section id="security" className="mx-auto max-w-[1440px] px-10 py-4">
-        <div className="grid min-h-[258px] gap-10 rounded-xl border border-white/[0.08] bg-[#030306] px-7 py-8 shadow-[0_0_44px_rgba(88,28,135,0.08)] lg:grid-cols-[0.9fr_1.2fr]">
+      <section id="security" className="mx-auto max-w-[1440px] px-5 py-3 sm:px-10 sm:py-4">
+        <div className="grid gap-5 rounded-2xl border border-white/[0.08] bg-[#030306] px-4 py-5 shadow-[0_0_44px_rgba(88,28,135,0.08)] sm:min-h-[258px] sm:gap-10 sm:rounded-xl sm:px-7 sm:py-8 lg:grid-cols-[0.9fr_1.2fr]">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.06em] text-purple-400">
+            <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-purple-400 sm:text-[13px]">
               Почему DARKKICK
             </p>
-            <h2 className="mt-4 max-w-[520px] text-[30px] font-bold leading-tight tracking-[-0.04em]">
+            <h2 className="mt-3 max-w-[520px] text-[28px] font-bold leading-tight tracking-[-0.04em] sm:mt-4 sm:text-[30px]">
               Приватность по умолчанию.
               <br />
-              Свобода навсегда.
+              <span className="hidden sm:inline">Свобода навсегда.</span>
             </h2>
-            <p className="mt-6 max-w-[570px] text-[15px] leading-7 text-zinc-500">
+            <p className="mt-4 max-w-[570px] text-[14px] leading-6 text-zinc-500 sm:mt-6 sm:text-[15px] sm:leading-7">
               Мы создали DARKKICK, чтобы вернуть контроль над общением
               пользователям. Никаких компромиссов между удобством и
               безопасностью.
             </p>
             <a
               href="#screenshots"
-              className="mt-7 inline-flex h-11 items-center rounded-lg bg-purple-600 px-6 text-[15px] font-bold text-white shadow-[0_0_24px_rgba(124,58,237,0.44)]"
+              className="mt-5 hidden h-11 items-center rounded-lg bg-purple-600 px-6 text-[15px] font-bold text-white shadow-[0_0_24px_rgba(124,58,237,0.44)] sm:inline-flex sm:mt-7"
             >
               Узнать больше
             </a>
           </div>
 
-          <div className="grid gap-px overflow-hidden bg-white/[0.07] lg:grid-cols-2">
+          <div className="grid grid-cols-2 gap-2 overflow-hidden sm:gap-px sm:bg-white/[0.07] lg:grid-cols-2">
             {privacyItems.map((item) => (
-              <article key={item.title} className="flex gap-5 bg-[#030306] p-5">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-purple-500/25 bg-purple-950/20 text-purple-400 [&_path]:fill-none [&_path]:stroke-current [&_path]:stroke-2">
+              <article key={item.title} className="rounded-2xl border border-purple-500/15 bg-[#07070b] p-4 sm:flex sm:gap-5 sm:rounded-none sm:border-0 sm:bg-[#030306] sm:p-5">
+                <div className="mb-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-purple-500/25 bg-purple-950/20 text-purple-400 sm:mb-0 sm:h-12 sm:w-12 [&_path]:fill-none [&_path]:stroke-current [&_path]:stroke-2">
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="text-[16px] font-bold">{item.title}</h3>
-                  <p className="mt-2 text-[14px] leading-6 text-zinc-500">
+                  <h3 className="text-[13px] font-bold leading-tight sm:text-[16px]">{item.title}</h3>
+                  <p className="mt-2 hidden text-[14px] leading-6 text-zinc-500 sm:block">
                     {item.text}
                   </p>
                 </div>
@@ -329,39 +361,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="screenshots" className="mx-auto max-w-[1440px] px-10 py-4">
-        <div className="relative grid min-h-[310px] overflow-hidden rounded-xl border border-white/[0.08] bg-[#030306] px-7 py-9 shadow-[0_0_58px_rgba(88,28,135,0.14)] lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:gap-14">
+      <section id="screenshots" className="mx-auto max-w-[1440px] px-5 py-3 sm:px-10 sm:py-4">
+        <div className="relative grid gap-5 overflow-hidden rounded-2xl border border-white/[0.08] bg-[#030306] px-4 py-5 shadow-[0_0_58px_rgba(88,28,135,0.14)] sm:min-h-[310px] sm:rounded-xl sm:px-7 sm:py-9 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:gap-14">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_72%_48%,rgba(124,58,237,0.24),transparent_34%),linear-gradient(rgba(168,85,247,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(168,85,247,0.045)_1px,transparent_1px)] bg-[size:auto,34px_34px,34px_34px]" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.45)_1px,transparent_0)] [background-size:18px_18px]" />
           <div className="relative z-10">
-            <p className="text-[13px] font-bold uppercase tracking-[0.06em] text-purple-400">
+            <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-purple-400 sm:text-[13px]">
               Приложение
             </p>
-            <h2 className="mt-4 text-[34px] font-bold leading-tight tracking-[-0.04em]">
+            <h2 className="mt-3 text-[26px] font-bold leading-tight tracking-[-0.04em] sm:mt-4 sm:text-[34px]">
               Скриншоты скоро появятся.
             </h2>
-            <p className="mt-7 max-w-[520px] text-[18px] leading-9 text-zinc-400">
+            <p className="mt-4 max-w-[520px] text-[15px] leading-7 text-zinc-400 sm:mt-7 sm:text-[18px] sm:leading-9">
               DARKKICK активно развивается.
               <br />
               Сейчас мы сосредоточены на разработке новых функций и улучшении
               интерфейса.
             </p>
-            <p className="mt-5 max-w-[530px] text-[14px] leading-7 text-zinc-500">
+            <p className="mt-3 max-w-[530px] text-[13px] leading-6 text-zinc-500 sm:mt-5 sm:text-[14px] sm:leading-7">
               Первые реальные скриншоты появятся после финального редизайна
               интерфейса.
             </p>
           </div>
 
-          <div className="relative z-10 flex min-h-[205px] items-center justify-center rounded-lg border border-purple-500/45 bg-[#050508] shadow-[0_0_86px_rgba(124,58,237,0.34)]">
+          <div className="relative z-10 flex min-h-[148px] max-w-full items-center justify-center rounded-2xl border border-purple-500/45 bg-[#050508] shadow-[0_0_62px_rgba(124,58,237,0.26)] sm:min-h-[205px] sm:rounded-lg sm:shadow-[0_0_86px_rgba(124,58,237,0.34)]">
             <div className="pointer-events-none absolute inset-0 rounded-lg bg-[radial-gradient(circle_at_50%_50%,rgba(124,58,237,0.2),transparent_58%)]" />
             <div className="text-center">
-              <p className="text-[15px] uppercase tracking-[0.55em] text-purple-300">
+              <p className="text-[12px] uppercase tracking-[0.28em] text-purple-300 sm:text-[15px] sm:tracking-[0.55em]">
                 DARKKICK
               </p>
-              <p className="mt-5 text-[32px] font-bold uppercase tracking-[0.42em] text-purple-400">
+              <p className="mt-4 text-[21px] font-bold uppercase tracking-[0.18em] text-purple-400 sm:mt-5 sm:text-[32px] sm:tracking-[0.42em]">
                 SCREENSHOTS
               </p>
-              <p className="mt-5 text-[17px] uppercase tracking-[0.42em] text-zinc-300">
+              <p className="mt-4 text-[12px] uppercase tracking-[0.2em] text-zinc-300 sm:mt-5 sm:text-[17px] sm:tracking-[0.42em]">
                 COMING SOON
               </p>
             </div>
@@ -369,44 +401,44 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-[1440px] px-10 py-4">
-        <div className="grid gap-12 rounded-xl border border-white/[0.08] bg-[linear-gradient(125deg,rgba(88,28,135,0.12),#030306_34%,#030306)] px-7 py-10 shadow-[0_0_52px_rgba(88,28,135,0.1)] lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+      <section id="about" className="mx-auto max-w-[1440px] px-5 py-3 sm:px-10 sm:py-4">
+        <div className="grid gap-6 rounded-2xl border border-white/[0.08] bg-[linear-gradient(125deg,rgba(88,28,135,0.12),#030306_34%,#030306)] px-4 py-5 shadow-[0_0_52px_rgba(88,28,135,0.1)] sm:gap-12 sm:rounded-xl sm:px-7 sm:py-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.06em] text-purple-400">
+            <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-purple-400 sm:text-[13px]">
               О проекте
             </p>
-            <h2 className="mt-5 max-w-[560px] text-[38px] font-bold leading-tight tracking-[-0.045em]">
+            <h2 className="mt-3 max-w-[560px] text-[27px] font-bold leading-tight tracking-[-0.045em] sm:mt-5 sm:text-[38px]">
               Создано одним человеком.
               <br />
               Без команды. Без инвесторов.
               <br />
               Без корпорации.
             </h2>
-            <p className="mt-7 max-w-[560px] text-[17px] leading-8 text-zinc-400">
+            <p className="mt-4 max-w-[560px] text-[14px] leading-7 text-zinc-400 sm:mt-7 sm:text-[17px] sm:leading-8">
               DARKKICK — независимый проект, созданный из любви к приватности,
               свободе и собственному стилю.
             </p>
             <a
               href="#download"
-              className="mt-7 inline-flex h-11 items-center rounded-md border border-purple-500/60 bg-purple-950/10 px-6 text-[14px] font-bold text-purple-200 shadow-[0_0_24px_rgba(124,58,237,0.14)]"
+              className="mt-5 inline-flex h-10 items-center rounded-md border border-purple-500/60 bg-purple-950/10 px-5 text-[13px] font-bold text-purple-200 shadow-[0_0_24px_rgba(124,58,237,0.14)] sm:mt-7 sm:h-11 sm:px-6 sm:text-[14px]"
             >
               История проекта
             </a>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 xl:grid-cols-4">
             {stats.map((stat) => (
               <article
                 key={stat.label}
-                className="min-h-[196px] rounded-xl border border-white/[0.08] bg-[#060609] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+                className="min-h-[116px] rounded-2xl border border-white/[0.08] bg-[#060609] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:min-h-[196px] sm:rounded-xl sm:p-7"
               >
-                <div className="mb-7 flex h-12 w-12 items-center justify-center rounded-xl border border-purple-500/30 bg-purple-950/25 text-purple-400 shadow-[0_0_28px_rgba(124,58,237,0.18)] [&_path]:fill-none [&_path]:stroke-current [&_path]:stroke-2">
+                <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl border border-purple-500/30 bg-purple-950/25 text-purple-400 shadow-[0_0_28px_rgba(124,58,237,0.18)] sm:mb-7 sm:h-12 sm:w-12 [&_svg]:h-6 [&_svg]:w-6 sm:[&_svg]:h-9 sm:[&_svg]:w-9 [&_path]:fill-none [&_path]:stroke-current [&_path]:stroke-2">
                   {stat.icon}
                 </div>
-                <p className="text-[31px] font-bold tracking-[-0.04em]">
+                <p className="text-[22px] font-bold tracking-[-0.04em] sm:text-[31px]">
                   {stat.value}
                 </p>
-                <p className="mt-2 text-[15px] text-zinc-500">
+                <p className="mt-1 text-[12px] text-zinc-500 sm:mt-2 sm:text-[15px]">
                   {stat.label.toLowerCase()}
                 </p>
               </article>
@@ -415,20 +447,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="download" className="mx-auto max-w-[1440px] px-10 py-4">
-        <div className="relative flex min-h-[180px] flex-col gap-8 overflow-hidden rounded-xl border border-purple-500/45 bg-[#050507] px-16 py-10 shadow-[0_0_70px_rgba(124,58,237,0.24)] lg:flex-row lg:items-center lg:justify-between">
+      <section id="download" className="mx-auto max-w-[1440px] px-5 py-3 sm:px-10 sm:py-4">
+        <div className="relative flex flex-col gap-5 overflow-hidden rounded-2xl border border-purple-500/45 bg-[#050507] px-5 py-6 shadow-[0_0_54px_rgba(124,58,237,0.2)] sm:min-h-[180px] sm:rounded-xl sm:px-16 sm:py-10 sm:shadow-[0_0_70px_rgba(124,58,237,0.24)] lg:flex-row lg:items-center lg:justify-between">
           <div className="pointer-events-none absolute inset-y-0 left-0 w-[56%] bg-[radial-gradient(circle_at_0%_50%,rgba(147,51,234,0.62),rgba(91,33,182,0.28)_34%,transparent_70%)]" />
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(105deg,rgba(91,33,182,0.34),transparent_46%)]" />
           <div className="relative z-10">
-            <p className="text-[13px] font-bold uppercase tracking-[0.06em] text-purple-300">
+            <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-purple-300 sm:text-[13px]">
               Скачать
             </p>
-            <h2 className="mt-2 max-w-[660px] text-[36px] font-bold leading-tight tracking-[-0.04em]">
+            <h2 className="mt-2 max-w-[660px] text-[27px] font-bold leading-tight tracking-[-0.04em] sm:text-[36px]">
               DARKKICK для общения
               <br />
               без лишних свидетелей.
             </h2>
-            <p className="mt-4 text-[17px] text-purple-100/75">
+            <p className="mt-3 text-[14px] leading-6 text-purple-100/75 sm:mt-4 sm:text-[17px]">
               Скоро будет доступен для первых пользователей.
             </p>
           </div>
@@ -437,7 +469,7 @@ export default function Home() {
             href={apkDownloadUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative z-10 inline-flex h-[64px] items-center gap-3 rounded-lg bg-purple-600 px-14 text-[16px] font-bold text-white shadow-[0_0_44px_rgba(168,85,247,0.68),0_0_92px_rgba(124,58,237,0.36)] hover:bg-purple-500"
+            className="relative z-10 inline-flex h-12 w-full items-center justify-center gap-3 rounded-lg bg-purple-600 px-6 text-[15px] font-bold text-white shadow-[0_0_44px_rgba(168,85,247,0.68),0_0_92px_rgba(124,58,237,0.36)] hover:bg-purple-500 sm:h-[64px] sm:w-auto sm:px-14 sm:text-[16px]"
           >
             <DownloadIcon className="h-5 w-5" />
             Скачать DARKKICK
