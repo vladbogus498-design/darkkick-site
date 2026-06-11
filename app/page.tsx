@@ -230,7 +230,7 @@ export default function Home() {
         id="top"
         className="relative mx-auto min-h-[100svh] max-w-[1440px] scroll-mt-20 overflow-hidden px-5 pb-7 pt-[76px] sm:min-h-[764px] sm:scroll-mt-24 sm:px-10 sm:pt-[156px]"
       >
-        <div className="pointer-events-none relative left-1/2 -ml-[50vw] h-[46svh] w-screen opacity-95 sm:absolute sm:left-[38%] sm:right-0 sm:top-[76px] sm:bottom-auto sm:ml-0 sm:h-[690px] sm:w-[62%] sm:opacity-90">
+        <div className="pointer-events-none relative left-1/2 -ml-[50vw] h-[56svh] min-h-[420px] w-screen opacity-95 sm:absolute sm:left-[38%] sm:right-0 sm:top-[76px] sm:bottom-auto sm:ml-0 sm:h-[690px] sm:min-h-0 sm:w-[62%] sm:opacity-90">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(147,51,234,0.38),transparent_46%)] sm:hidden" />
           <Image
             src="/dark-angel-hero.png"
@@ -238,9 +238,9 @@ export default function Home() {
             fill
             priority
             sizes="(max-width: 639px) 100vw, 62vw"
-            className="h-[46svh] w-full -translate-x-[8%] object-cover object-center sm:translate-x-0 sm:object-cover sm:object-right-top"
+            className="h-full w-full object-cover object-center sm:object-cover sm:object-right-top"
           />
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent via-[#2a073f]/30 to-black sm:hidden" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-[#2a073f]/25 to-black sm:hidden" />
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.22)_38%,rgba(0,0,0,0.66)_56%,#000_100%),linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.55)_42%,rgba(0,0,0,0.12)_100%)] sm:inset-x-0 sm:bottom-auto sm:top-[76px] sm:h-[690px] sm:bg-[linear-gradient(90deg,#000_0%,#000_32%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.12)_65%,#000_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
