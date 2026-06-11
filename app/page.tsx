@@ -230,7 +230,7 @@ export default function Home() {
         id="top"
         className="relative mx-auto min-h-[100svh] max-w-[1440px] scroll-mt-20 overflow-hidden px-5 pb-7 pt-[76px] sm:min-h-[764px] sm:scroll-mt-24 sm:px-10 sm:pt-[156px]"
       >
-        <div className="pointer-events-none relative left-1/2 -ml-[50vw] h-[56svh] min-h-[420px] w-screen opacity-95 sm:absolute sm:left-[38%] sm:right-0 sm:top-[76px] sm:bottom-auto sm:ml-0 sm:h-[690px] sm:min-h-0 sm:w-[62%] sm:opacity-90">
+        <div className="pointer-events-none relative left-1/2 -ml-[50vw] h-[50svh] min-h-[330px] w-screen opacity-95 sm:absolute sm:left-[38%] sm:right-0 sm:top-[76px] sm:bottom-auto sm:ml-0 sm:h-[690px] sm:min-h-0 sm:w-[62%] sm:opacity-90">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(147,51,234,0.38),transparent_46%)] sm:hidden" />
           <Image
             src="/dark-angel-hero.png"
@@ -238,7 +238,7 @@ export default function Home() {
             fill
             priority
             sizes="(max-width: 639px) 100vw, 62vw"
-            className="h-full w-full scale-[0.88] object-cover object-[42%_center] sm:scale-100 sm:object-cover sm:object-right-top"
+            className="h-full w-full object-cover object-center sm:object-right-top"
           />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-[#2a073f]/25 to-black sm:hidden" />
         </div>
@@ -268,7 +268,7 @@ export default function Home() {
             </span>
           </p>
 
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-10 sm:flex sm:gap-5">
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-10 sm:flex sm:gap-5">
             <a
               href={apkDownloadUrl}
               target="_blank"
