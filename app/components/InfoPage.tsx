@@ -14,6 +14,50 @@ type InfoPageProps = {
   children?: React.ReactNode;
 };
 
+function renderInlineLinks(text: string) {
+  const parts = text.split(/(https?:\/\/\S+|[\w.-]+@[\w.-]+\.[A-Za-z]{2,})/g);
+
+  return parts.map((part, index) => {
+    if (part.startsWith("http")) {
+      const cleanUrl = part.replace(/[.,;)]$/, "");
+      const suffix = part.slice(cleanUrl.length);
+
+      return (
+        <span key={`${part}-${index}`}>
+          <a
+            href={cleanUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-300 underline decoration-purple-500/40 underline-offset-4 hover:text-purple-200"
+          >
+            {cleanUrl}
+          </a>
+          {suffix}
+        </span>
+      );
+    }
+
+    if (part.includes("@")) {
+      const cleanEmail = part.replace(/[.,;)]$/, "");
+      const suffix = part.slice(cleanEmail.length);
+
+      return (
+        <span key={`${part}-${index}`}>
+          <a
+            href={`mailto:${cleanEmail}`}
+            className="text-purple-300 underline decoration-purple-500/40 underline-offset-4 hover:text-purple-200"
+          >
+            {cleanEmail}
+          </a>
+          {suffix}
+        </span>
+      );
+    }
+
+    return part;
+  });
+}
+
 export function InfoPage({
   eyebrow,
   title,
@@ -70,7 +114,7 @@ export function InfoPage({
               </div>
               <div className="space-y-4 text-[16px] leading-8 text-zinc-400">
                 {section.body.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph}>{renderInlineLinks(paragraph)}</p>
                 ))}
               </div>
             </article>
