@@ -3,7 +3,7 @@ import { SiteFooter } from "./SiteFooter";
 
 type Section = {
   title: string;
-  body: string[];
+  body: React.ReactNode[];
 };
 
 type InfoPageProps = {
@@ -56,6 +56,14 @@ function renderInlineLinks(text: string) {
 
     return part;
   });
+}
+
+function renderParagraph(paragraph: React.ReactNode) {
+  if (typeof paragraph === "string") {
+    return renderInlineLinks(paragraph);
+  }
+
+  return paragraph;
 }
 
 export function InfoPage({
@@ -113,8 +121,8 @@ export function InfoPage({
                 </h2>
               </div>
               <div className="space-y-4 text-[16px] leading-8 text-zinc-400">
-                {section.body.map((paragraph) => (
-                  <p key={paragraph}>{renderInlineLinks(paragraph)}</p>
+                {section.body.map((paragraph, paragraphIndex) => (
+                  <p key={paragraphIndex}>{renderParagraph(paragraph)}</p>
                 ))}
               </div>
             </article>
