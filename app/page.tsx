@@ -69,9 +69,9 @@ const features = [
 
 const privacyItems = [
   {
-    title: "Сквозное шифрование",
-    shortTitle: "E2EE",
-    text: "Все сообщения и звонки защищены сквозным шифрованием.",
+    title: "Защита сообщений",
+    shortTitle: "Защита",
+    text: "DARKKICK стремится защищать сообщения и данные в пределах возможностей сервиса.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden="true">
         <path d="M12 3.5 19 6v5.8c0 4.2-2.7 7.2-7 8.7-4.3-1.5-7-4.5-7-8.7V6l7-2.5Z" />
@@ -94,7 +94,7 @@ const privacyItems = [
   {
     title: "Без номера телефона",
     shortTitle: "Без номера",
-    text: "Регистрация без привязки к номеру. Полная анонимность.",
+    text: "Регистрация без привязки к номеру и без лишних данных.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden="true">
         <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
