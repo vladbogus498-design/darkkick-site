@@ -238,9 +238,9 @@ export default function Home() {
             fill
             priority
             sizes="(max-width: 639px) 100vw, 62vw"
-            className="object-cover object-[40%_top] sm:object-cover sm:object-right-top"
+            className="object-cover object-[32%_top] sm:object-cover sm:object-right-top"
           />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent via-purple-950/20 to-black sm:hidden" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent via-[#2a073f]/30 to-black sm:hidden" />
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.22)_38%,rgba(0,0,0,0.66)_56%,#000_100%),linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.55)_42%,rgba(0,0,0,0.12)_100%)] sm:inset-x-0 sm:bottom-auto sm:top-[76px] sm:h-[690px] sm:bg-[linear-gradient(90deg,#000_0%,#000_32%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.12)_65%,#000_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
