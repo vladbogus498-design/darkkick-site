@@ -238,7 +238,7 @@ export default function Home() {
             fill
             priority
             sizes="(max-width: 639px) 100vw, 62vw"
-            className="h-full w-full object-cover object-center sm:object-right-top"
+            className="h-full w-full object-cover object-[35%_center] sm:object-right-top"
           />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-[#2a073f]/25 to-black sm:hidden" />
         </div>
