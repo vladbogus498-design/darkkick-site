@@ -230,21 +230,21 @@ export default function Home() {
         id="top"
         className="relative mx-auto min-h-[100svh] max-w-[1440px] scroll-mt-20 overflow-hidden px-5 pb-7 pt-[76px] sm:min-h-[764px] sm:scroll-mt-24 sm:px-10 sm:pt-[156px]"
       >
-        <div className="pointer-events-none absolute inset-x-0 -top-[10svh] bottom-0 opacity-95 sm:left-[38%] sm:right-0 sm:top-[76px] sm:bottom-auto sm:h-[690px] sm:w-[62%] sm:opacity-90">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_22%,rgba(147,51,234,0.38),transparent_46%)] sm:hidden" />
+        <div className="pointer-events-none relative -mx-5 h-[42svh] opacity-95 sm:absolute sm:left-[38%] sm:right-0 sm:top-[76px] sm:bottom-auto sm:mx-0 sm:h-[690px] sm:w-[62%] sm:opacity-90">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(147,51,234,0.38),transparent_46%)] sm:hidden" />
           <Image
             src="/dark-angel-hero.png"
             alt=""
             fill
             priority
             sizes="(max-width: 639px) 100vw, 62vw"
-            className="object-contain object-[center_18%] sm:object-cover sm:object-right-top"
+            className="object-contain object-center sm:object-cover sm:object-right-top"
           />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,0,0,0.18)_30%,rgba(0,0,0,0.72)_66%,#000_100%),linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.55)_42%,rgba(0,0,0,0.12)_100%)] sm:inset-x-0 sm:bottom-auto sm:top-[76px] sm:h-[690px] sm:bg-[linear-gradient(90deg,#000_0%,#000_32%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.12)_65%,#000_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.22)_38%,rgba(0,0,0,0.66)_56%,#000_100%),linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.55)_42%,rgba(0,0,0,0.12)_100%)] sm:inset-x-0 sm:bottom-auto sm:top-[76px] sm:h-[690px] sm:bg-[linear-gradient(90deg,#000_0%,#000_32%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.12)_65%,#000_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
 
-        <div className="relative z-10 flex min-h-[calc(100svh-104px)] max-w-[540px] flex-col justify-end pb-2 sm:block sm:min-h-0 sm:pb-0">
+        <div className="relative z-10 max-w-[540px] sm:block">
           <div className="inline-flex h-8 w-fit items-center gap-2 rounded-full bg-[#101014]/90 px-3 text-[12px] text-zinc-200 ring-1 ring-white/[0.06] sm:gap-3 sm:px-4 sm:text-[15px]">
             <span className="h-2.5 w-2.5 rounded-full bg-purple-500 shadow-[0_0_16px_rgba(168,85,247,1)]" />
             Приватный мессенджер нового поколения
