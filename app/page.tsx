@@ -230,7 +230,8 @@ export default function Home() {
         id="top"
         className="relative mx-auto min-h-[100svh] max-w-[1440px] scroll-mt-20 overflow-hidden px-5 pb-7 pt-[76px] sm:min-h-[764px] sm:scroll-mt-24 sm:px-10 sm:pt-[156px]"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-16 h-[62svh] w-full opacity-[0.78] sm:left-[38%] sm:right-0 sm:top-[76px] sm:h-[690px] sm:w-[62%] sm:opacity-90">
+        <div className="pointer-events-none absolute -left-[18%] -right-[18%] top-16 h-[72svh] opacity-[0.92] sm:left-[38%] sm:right-0 sm:top-[76px] sm:h-[690px] sm:w-[62%] sm:opacity-90">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_55%_20%,rgba(147,51,234,0.34),transparent_42%)] sm:hidden" />
           <Image
             src="/dark-angel-hero.png"
             alt=""
@@ -240,7 +241,7 @@ export default function Home() {
             className="object-contain object-[center_top] sm:object-cover sm:object-right-top"
           />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.48)_36%,#000_86%),linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.66)_42%,rgba(0,0,0,0.28)_100%)] sm:inset-x-0 sm:bottom-auto sm:top-[76px] sm:h-[690px] sm:bg-[linear-gradient(90deg,#000_0%,#000_32%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.12)_65%,#000_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,0,0,0.36)_36%,#000_88%),linear-gradient(90deg,rgba(0,0,0,0.94)_0%,rgba(0,0,0,0.68)_42%,rgba(0,0,0,0.18)_100%)] sm:inset-x-0 sm:bottom-auto sm:top-[76px] sm:h-[690px] sm:bg-[linear-gradient(90deg,#000_0%,#000_32%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.12)_65%,#000_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
 
         <div className="relative z-10 flex min-h-[calc(100svh-104px)] max-w-[540px] flex-col justify-end sm:block sm:min-h-0">
@@ -249,7 +250,7 @@ export default function Home() {
             Приватный мессенджер нового поколения
           </div>
 
-          <h1 className="mt-6 max-w-full text-[clamp(56px,16vw,78px)] font-black uppercase leading-[0.9] tracking-[-0.075em] text-zinc-100 drop-shadow-[0_8px_28px_rgba(255,255,255,0.16)] sm:mt-8 sm:text-[104px]">
+          <h1 className="mt-6 max-w-full text-[clamp(52px,15vw,72px)] font-black uppercase leading-[0.9] tracking-[-0.055em] text-zinc-100 drop-shadow-[0_8px_28px_rgba(255,255,255,0.16)] sm:mt-8 sm:text-[104px] sm:tracking-[-0.075em]">
             DARKKICK
           </h1>
 
@@ -297,7 +298,7 @@ export default function Home() {
         {mobileFeatureTiles.map((feature) => (
           <article
             key={feature.title}
-            className="min-h-[88px] rounded-2xl border border-purple-500/25 bg-[#06060a]/95 p-5 shadow-[0_0_28px_rgba(88,28,135,0.16)] transition hover:border-purple-400/60 hover:shadow-[0_0_34px_rgba(168,85,247,0.28)] active:border-purple-400/70 active:bg-purple-950/20"
+            className="min-h-[126px] rounded-2xl border border-purple-500/30 bg-[radial-gradient(circle_at_18%_0%,rgba(124,58,237,0.18),transparent_42%),#06060a] p-5 shadow-[0_0_34px_rgba(88,28,135,0.2)] transition hover:border-purple-400/60 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] active:border-purple-400/70 active:bg-purple-950/20"
           >
             <div className="mb-2.5 text-purple-400 [&_svg]:h-6 [&_svg]:w-6 [&_path]:fill-none [&_path]:stroke-current [&_path]:stroke-2">
               {feature.icon}
@@ -305,6 +306,11 @@ export default function Home() {
             <h3 className="text-[14px] font-black uppercase tracking-[-0.03em]">
               {feature.title}
             </h3>
+            {feature.text ? (
+              <p className="mt-2 overflow-hidden text-[11px] leading-5 text-zinc-500 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]">
+                {feature.text}
+              </p>
+            ) : null}
           </article>
         ))}
       </section>
